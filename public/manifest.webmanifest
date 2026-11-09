@@ -1,0 +1,9 @@
+{
+  "name": "Trackify",
+  "short_name": "Trackify",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f2f4f8",
+  "theme_color": "#2c4a92",
+  "lang": "de"
+}

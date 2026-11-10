@@ -21,7 +21,7 @@ Ein Habit Tracker für Leute, die mehr wollen als Häkchen: Gewohnheiten mit Ser
 | **Training** | Gym, BJJ, MMA, Kickboxen, Kardio; Sätze mit Gewicht und Wiederholungen, „Wie letztes Mal“, Bestwerte, Kraftkurven mit wählbarer Messgröße, Gesamtstatistik |
 | **Screenshot-Import** | Liest einen Trainingsplan aus einem Google-Sheets-Screenshot per Texterkennung **direkt im Browser**, das Bild verlässt nie das Gerät |
 | **Import** | Notion-Export (ZIP/CSV) mit Spaltenzuordnung und Erkennung von Krankheitstagen, Trainingsdaten-Import, JSON-Backup |
-| **Konten** | Anmeldung per E-Mail-Link, Synchronisation zwischen Geräten, jeder sieht nur seine eigenen Daten |
+| **Konten** | Anmeldung mit E-Mail und Passwort oder per E-Mail-Link, Passwort zurücksetzen, Synchronisation zwischen Geräten, jeder sieht nur seine eigenen Daten |
 
 ## Technik
 

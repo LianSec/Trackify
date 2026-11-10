@@ -1,6 +1,6 @@
 // @ts-nocheck
 import "./styles.css";
-import { boot, accAction, sendLink } from "./features/account";
+import { boot, accAction, accSubmit } from "./features/account";
 import { TT, chartData, trAction } from "./features/training";
 import { fmtNum } from "./views/stats";
 import { $, WD, addDays, toast, todayKey, uid, wdOf } from "./lib/util";
@@ -56,7 +56,7 @@ document.addEventListener("click", e => {
   if (!t) return;
   const d = t.dataset;
   if (d.migrate){ const h = S.habits.find(x => x.id === d.migrate); const n = h ? migrateChecks(h) : 0; toast(`${n} Tage übernommen.`); return render(); }
-  if (d.acc) return accAction(d.acc);
+  if (d.acc) return accAction(d.acc, d.a);
   if (d.trimp){
     if (d.trimp === "cancel"){ ui.trImp = null; return render(); }
     if (d.trimp === "mode"){ ui.trImp.mode = d.a; return render(); }
@@ -158,7 +158,7 @@ document.addEventListener("change", e => {
 });
 
 document.addEventListener("submit", e => {
-  if (e.target.id === "login-form"){ e.preventDefault(); return sendLink($("#login-email").value.trim()); }
+  if (e.target.matches && e.target.matches("form[data-accform]")){ e.preventDefault(); return accSubmit(e.target); }
   const f = e.target.closest("form[data-form]"); if (!f) return; e.preventDefault();
   const fd = new FormData(f), id = f.dataset.form;
   const name = String(fd.get("name")||"").trim(); if (!name){ toast("Gib der Gewohnheit einen Namen."); return; }
